@@ -1,0 +1,61 @@
+@import "variables";
+@import "mixins";
+
+//Global styles
+body {
+  font-family: @roboto;
+  .btn-primary {
+    background-color: @gray;
+    border-color: @gray;
+    margin-bottom: 25px;
+    @media(min-width: @tablet) {
+      margin-bottom: 0;
+      }
+
+      &:hover {
+      background-color: @gray;
+      border-color: @gray;
+    }
+  }
+}
+
+//Nav bar
+.nav {
+  height: 100px;
+  background-color: @light-green;
+}
+
+//Footer
+footer {
+  height: 100px;
+  background-color: @gray;
+}
+
+//Body
+section {
+  padding: 20px 0;
+  h1 {
+    font-size: 30px;
+    color: @blue;
+    font-weight: 400px;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    color: @blue;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 500px;
+  }
+
+  h3 {
+    margin-top: 20px;
+    color: @dark-green;
+  }
+  h4 {
+    color: @light-green;
+  }
+  &:first-of-type {
+    .border-bottom-thinner();
+  }
+}

@@ -27,27 +27,26 @@
 
   button {
       background-color: @yellow;
-      border-color: @gray;
       text-transform: uppercase;
       font-size: 18px;
       font-weight: 500px;
       margin-bottom: 25px;
-        @media(min-width: @tablet) {
-          margin-bottom: 0;
-        }
-    }
+      border-radius: 100%;
+      border-color: @gray;
+      border-width: 6px;
+  }
 
   .highlight {
       text-decoration-color: @red;
       text-transform: uppercase;
   }
 
-  footer .order .dine {
+  footer .container-fluid-order .container-fluid-dine {
     text-align: center;
   }
 
 //Header
-header {
+.container-fluid-header {
   height: 100px;
   background-color: @yellow;
   display: flex;
@@ -69,6 +68,11 @@ ul li {
 
 section {
   padding: 20px 0;
+
+  article {
+    padding: 20px;
+  }
+
   h1 {
     font-size: 30px;
     color: @blue;
@@ -82,15 +86,15 @@ section {
     font-weight: 500px;
   }
 
-  .order {
+  .container-fluid-order {
     background-image: url("img/banner-bg.png");
     }
 
-  .best {
+  .container-fluid-best {
     background-color: white;
   }
 
-  .dine {
+  .container-fluid-dine {
     background-color: @gray;
   }
 

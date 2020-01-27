@@ -2,36 +2,71 @@
 @import "mixins";
 
 //Global styles
-body {
-  font-family: @roboto;
-  .btn-primary {
-    background-color: @gray;
-    border-color: @gray;
-    margin-bottom: 25px;
-    @media(min-width: @tablet) {
-      margin-bottom: 0;
-      }
 
-      &:hover {
-      background-color: @gray;
-      border-color: @gray;
-    }
+  * {
+  	margin: 0;
+  	padding: 0;
+  	border: 0;
   }
-}
 
-//Nav bar
-.nav {
+  *:focus {
+  	outline: 0;
+  }
+
+  html {
+    height: 100%;
+    min-width: 300px;
+  }
+
+  body {
+  	font-family: myriad-pro, sans-serif;
+    text-decoration-color: @color-primary;
+    height: 100%;
+    width: 100%;
+  }
+
+  button {
+      background-color: @yellow;
+      border-color: @gray;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 500px;
+      margin-bottom: 25px;
+        @media(min-width: @tablet) {
+          margin-bottom: 0;
+        }
+    }
+
+  .highlight {
+      text-decoration-color: @red;
+      text-transform: uppercase;
+  }
+
+  footer .order .dine {
+    text-align: center;
+  }
+
+//Header
+header {
   height: 100px;
-  background-color: @light-green;
+  background-color: @yellow;
+  display: flex;
+  justify-content: space-between;
 }
 
-//Footer
-footer {
-  height: 100px;
-  background-color: @gray;
+.banner {
+  background-color: @brown;
+  opacity: 33%;
+  width: 75%;
+  height: auto;
 }
 
-//Body
+ul li {
+  list-style-type: none;
+}
+
+//sections
+
 section {
   padding: 20px 0;
   h1 {
@@ -40,7 +75,6 @@ section {
     font-weight: 400px;
     text-transform: uppercase;
   }
-
   h2 {
     color: @blue;
     display: inline-block;
@@ -48,14 +82,28 @@ section {
     font-weight: 500px;
   }
 
-  h3 {
-    margin-top: 20px;
-    color: @dark-green;
+  .order {
+    background-image: url("img/banner-bg.png");
+    }
+
+  .best {
+    background-color: white;
   }
-  h4 {
-    color: @light-green;
+
+  .dine {
+    background-color: @gray;
   }
-  &:first-of-type {
-    .border-bottom-thinner();
+
+  img {
+    width: 25%;
+    height: auto;
+    padding: 10px;
   }
+}
+
+//Footer
+footer {
+  height: 100px;
+  background-color: @color-primary;
+  text-align: center;
 }
